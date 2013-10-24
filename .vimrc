@@ -9,14 +9,14 @@ syntax enable             " enable syntax highlighting (previously syntax on).
 " Python
 """""""""""""""""""""""""""""""
 
-" Setting       Abbr.   Explanation
+" Setting           Abbr.       Explanation
 
-set tabstop=4       " ts  A four-space tab indent width is the prefered coding style for Python (and everything else!), 
-                "       although of course some disagree. This page generally assumes you want 4-space indents.
+set tabstop=4       " ts        " A four-space tab indent width is the prefered coding style for Python (and everything else!), 
+                                " although of course some disagree. This page generally assumes you want 4-space indents.
 
-set shiftwidth=4    "     sw  This allows you to use the < and > keys from VIM's visual (marking) mode to block indent/unindent regions
+set shiftwidth=4    " sw        " This allows you to use the < and > keys from VIM's visual (marking) mode to block indent/unindent regions
 
-set smarttab    "     sta Use the "shiftwidth" setting for inserting <TAB>s instead of the "tabstop" setting, 
+set smarttab        " sta       " Use the "shiftwidth" setting for inserting <TAB>s instead of the "tabstop" setting, 
                 "       when at the beginning of a line. This may be redundant for most people, but some poeple 
                 "       like to keep their tabstop=8 for compatability when loading files, but setting shiftwidth=4 for nicer coding style.
 set expandtab   "    et   "     Insert spaces instead of <TAB> character when the <TAB> key is pressed. 
