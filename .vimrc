@@ -24,10 +24,10 @@ set expandtab   "    et   "     Insert spaces instead of <TAB> character when th
                 "               with indenting which can occur when people load files in different editors with different tab settings, 
                 "               and also cutting and pasting between applications (ie email/news for example) can result in problems. 
                 "               It is safer and more portable to use spaces for indenting.
-set softtabstop=4   sts   " People like using real tab character instead of spaces because it makes it easier when pressing BACKSPACE or DELETE, 
-                "               since if the indent is using spaces it will take 4 keystrokes to delete the indent. 
-                "               Using this setting, however, makes VIM see multiple space characters as tabstops, 
-                "               and so <BS> does the right thing and will delete four spaces (assuming 4 is your setting).
+set softtabstop=4   "   sts     " People like using real tab character instead of spaces because it makes it easier when pressing BACKSPACE or DELETE, 
+                                " since if the indent is using spaces it will take 4 keystrokes to delete the indent. 
+                                " Using this setting, however, makes VIM see multiple space characters as tabstops, 
+                                " and so <BS> does the right thing and will delete four spaces (assuming 4 is your setting).
 
 set autoindent  "   ai    "     Very painful to live without this (especially with Python)! 
                 "               It means that when you press RETURN and a new line is created, the indent of the new line will match that of the previous line.
