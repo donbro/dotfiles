@@ -1,0 +1,9 @@
+#
+#   aliases
+#
+
+alias ls='ls -atF'
+alias rm='rm -i'
+alias ..="cd .."
+# [https://github.com/mathiasbynens/dotfiles/blob/master/.aliases]
+
