@@ -102,7 +102,7 @@ PS1+="\[${green}\]\w ";         # working directory
 
 PS1+="\$(prompt_git \"${black}on ${violet}\")"; # Git repository details
 
-PS1+="\[${blue}\](\!) ";       # history number
+PS1+="\[${black}\](\!) ";       # history number
 
 
 # finish and reset color

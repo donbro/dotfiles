@@ -18,10 +18,6 @@ unset file;
 #   aliases (now in file .aliases)
 #
 
-#alias ls='ls -atF'
-#alias ..="cd .."
-# [https://github.com/mathiasbynens/dotfiles/blob/master/.aliases]
-
 #
 #   functions
 #
@@ -45,23 +41,14 @@ function histg () { history | grep $1 | sort -u -k 2 | grep -v "history | grep" 
 #
 #   (now in .bash_prompt)
 
-#	 custom prompt string:
-# PS1="\h:\w/ " 							# manny:~/ 
-# PS1="(\!) \h:\w " 						# (501) manny:~ 
-# PS1="\h:\w (\!) " 						# manny:~ (501) 
-#PS1='\[\e[1m\]\h:\w (\!) \[\e[m\]' 			# [BOLD]manny:~ (501) [END BOLD]
-
 #PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
-
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
-
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
-
 
 #	
 #   Virtualenv 
