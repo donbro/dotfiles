@@ -5,17 +5,14 @@
 echo -n "Hello from "
 ls -lF $BASH_ARGV | tr -s " "| cut -f9- -d" "
 
-# on startup shell BASH_ARGV has full path while via "source" has only basename.
-# so could do something like: ls -l $PWD/$BASH_SOURCE | tr -s " "| cut -f9- -d" "
+# 
+#   Source each "sub profile"
+# 
 
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-        [ -r "$file" ] && [ -f "$file" ] && source "$file";
+for file in ~/{.path,.bash_prompt,.exports,.aliases,.functions,.extra}; do
+        [ -r "$file" ] && [ -f "$file" ] && source "$file" && echo "sourced " $file ;
 done;
 unset file;
-
 
 #
 #   aliases (now in file .aliases)
@@ -46,14 +43,15 @@ function histg () { history | grep $1 | sort -u -k 2 | grep -v "history | grep" 
 #
 #   Bash Shell Prompt
 #
+#   (now in .bash_prompt)
 
 #	 custom prompt string:
 # PS1="\h:\w/ " 							# manny:~/ 
 # PS1="(\!) \h:\w " 						# (501) manny:~ 
 # PS1="\h:\w (\!) " 						# manny:~ (501) 
-PS1='\[\e[1m\]\h:\w (\!) \[\e[m\]' 			# [BOLD]manny:~ (501) [END BOLD]
+#PS1='\[\e[1m\]\h:\w (\!) \[\e[m\]' 			# [BOLD]manny:~ (501) [END BOLD]
 
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+#PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;

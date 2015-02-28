@@ -100,9 +100,9 @@ PS1+="\[${hostStyle}\]\h:";     # host:
 
 PS1+="\[${green}\]\w ";         # working directory
 
-PS1+="\[${blue}\](\!) ";       # history number
+PS1+="\$(prompt_git \"${black}on ${violet}\")"; # Git repository details
 
-PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
+PS1+="\[${blue}\](\!) ";       # history number
 
 
 # finish and reset color
