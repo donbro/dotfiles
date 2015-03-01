@@ -40,3 +40,4 @@ filetype indent plugin on
 "let python_highlight_builtins = 1
 
 set paste
+set laststatus=2

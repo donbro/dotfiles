@@ -1,5 +1,5 @@
 #
-#  echo "Hello from /Users/donb/.profile@ -> dotfiles/.profile (local init for login shell)"
+#   Hello from /Users/donb/.bash_profile@ -> dotfiles/.bash_profile
 #
 echo -n "Hello from "
 ls -lF $BASH_ARGV | tr -s " "| cut -f9- -d" "
@@ -10,6 +10,7 @@ ls -lF $BASH_ARGV | tr -s " "| cut -f9- -d" "
 
 for file in ~/{.path,.bash_prompt,.exports,.aliases,.functions,.extra}; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file" && echo "sourced " $file ;
+#        [ -r "$file" ] && [ -f "$file" ] && source "$file" && echo "sourced " $file ; # last && echo shows sub profiles as they are being sourced.
 done;
 unset file;
 
