@@ -7,3 +7,4 @@ alias rm='rm -i'
 alias ..="cd .."
 # [https://github.com/mathiasbynens/dotfiles/blob/master/.aliases]
 
+alias ffprobe='ffprobe -hide_banner -i '

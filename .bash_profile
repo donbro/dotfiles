@@ -1,7 +1,6 @@
 #
 #  echo "Hello from /Users/donb/.profile@ -> dotfiles/.profile (local init for login shell)"
 #
-
 echo -n "Hello from "
 ls -lF $BASH_ARGV | tr -s " "| cut -f9- -d" "
 
@@ -19,27 +18,14 @@ unset file;
 #
 
 #
-#   functions
+#   functions (now in .functions)
 #
 
-#  [ function ] name () compound-command [redirection]
-#      This defines a function named name.  The reserved word function is optional.  If the  function
-#      reserved word is supplied, the parentheses are optional.  The body of the function is the com-
-#      pound command compound-command (see Compound Commands above).  That command is usually a  list
-#      of  commands  between  {  and  }, but may be any command listed under Compound Commands above.
-#      compound-command is executed whenever name is specified as the name of a simple command.   Any
-#      redirections  (see  REDIRECTION below) specified when a function is defined are performed when
-#      the function is executed.  The exit status of a function definition is zero  unless  a  syntax
-#      error  occurs  or  a  readonly function with the same name already exists.  When executed, the
-#      exit status of a function is the exit status of the last command executed in the  body.   (See
-#      FUNCTIONS below.)
-
-function histg () { history | grep $1 | sort -u -k 2 | grep -v "history | grep" | egrep -v "[0-9]  histg"; }
+#function histg () { history | grep $1 | sort -u -k 2 | grep -v "history | grep" | egrep -v "[0-9]  histg"; }
 
 #
-#   Bash Shell Prompt
+#   Bash Shell Prompt (now in .bash_prompt)
 #
-#   (now in .bash_prompt)
 
 #PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
