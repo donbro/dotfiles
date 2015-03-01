@@ -39,3 +39,4 @@ filetype indent plugin on
 "set expandtab
 "let python_highlight_builtins = 1
 
+set paste
