@@ -7,4 +7,6 @@ function cdf() {
     cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
 
+function findbin() { find /usr/bin /bin/ /usr/local/bin -iname  "*$1*"; }
+
 

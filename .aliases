@@ -10,3 +10,5 @@ alias ..="cd .."
 alias ffprobe='ffprobe -hide_banner -i '
 alias mroe=more
 
+alias df='echo ; df -g -tufs | sort -r -k 4 ; echo'
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
