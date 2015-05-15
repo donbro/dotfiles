@@ -4,6 +4,7 @@
 echo -n "Hello from "
 ls -lF $BASH_ARGV | tr -s " "| cut -f9- -d" "
 
+echo  "Date:" `date` "Hostname:" `hostname` "tty:" `tty`
 # 
 #   Source each "sub profile"
 # 
@@ -79,3 +80,5 @@ echo
 #
 
 echo "[ ctrl - a => start of line  ctrl - e ==> end of line ]"
+
+source /Users/donb/.iterm2_shell_integration.bash
