@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/donb/dotfiles'
+let g:netrw_dirhist_2='/Users/donb'
+let g:netrw_dirhist_3='/Users/donb/dotfiles/.git'
+let g:netrw_dirhist_4='/Users/donb/dotfiles'
+let g:netrw_dirhist_5='/Volumes/Orsa/websites/arstechnica.com'

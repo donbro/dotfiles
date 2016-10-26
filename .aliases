@@ -1,0 +1,21 @@
+#
+#   aliases
+#
+
+alias ls='ls -atF'
+alias rm='rm -i'
+alias ..="cd .."
+# [https://github.com/mathiasbynens/dotfiles/blob/master/.aliases]
+
+alias ffprobe='ffprobe -hide_banner -i '
+alias mroe=more
+
+#freebsd
+#alias df='echo ; df -g -tufs | sort -r -k 4 ; echo'
+# mac
+alias df='echo ; df -P -T hfs -g | sort -r -k 4 ; echo'
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+# Git
+alias gs="git status"
+alias gaa="git add --all"

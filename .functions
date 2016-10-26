@@ -1,0 +1,19 @@
+
+function histg () { history | grep $1 | sort -u -k 2 | grep -v "history | grep" | egrep -v "[0-9]  histg"; }
+
+# Change working directory to the top-most Finder window location
+
+function cdf() {
+    cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
+}
+
+function findbin() { find /usr/bin /bin/ /usr/local/bin -iname  "*$1*"; }
+
+function systat() {
+    case $OSTYPE in darwin*)    
+        echo I am a Mac ;; 
+
+    esac 
+# [http://stackoverflow.com/questions/394230/detect-the-os-from-a-bash-script]
+
+}
